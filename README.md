@@ -1,6 +1,8 @@
 # convert-ui-test-task
 Featured products page view
 
+URL: https://bartek-szymanski.github.io/dist/index.html
+
 ## Design
 https://www.figma.com/file/2kWF0F7UMnuJObsC4uJV3w/test-task
 
