@@ -1,0 +1,138 @@
+@use 'sass:color';
+@use 'abstracts' as *;
+// --- 
+
+.product {
+    flex: 1 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq-tablet() {
+        flex-wrap: nowrap;
+        flex: 1 0 100%;
+    }
+    @include mq-desktop() {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex: 1 1 25%;
+    }
+
+    // Apply only to elements except the last one
+    &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        padding-bottom: $product-gap--mobile;
+        margin-bottom: $product-gap--mobile;
+
+        @include mq-tablet() {
+            padding-bottom: $product-gap--tablet;
+            margin-bottom: $product-gap--tablet;
+        }
+        @include mq-desktop() {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            padding-right: 50px;
+        }
+    }
+}
+
+// .product__info {}
+
+.product__img-link {
+    display: block;
+    position: relative;
+    height: $img--mobile__height;
+    flex: 1 1 100%;
+    overflow: hidden;
+    filter: drop-shadow(5px 5px 12px rgba(0, 0, 0, 0.2));
+
+    margin-bottom: 35px;
+    @include transition(filter);
+
+    @include mq-tablet() {
+        height: $img--tablet__height;
+        margin-bottom: 0;
+        margin-right: 50px;
+    }
+    @include mq-desktop() {
+        margin-bottom: 35px;
+        margin-right: 0;
+        flex: 1 1 100%;
+        height: $img--desktop__height;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        filter: drop-shadow(5px 5px 12px rgba(0, 0, 0, 0.4));
+    }
+}
+
+.product__img {
+    // #1. `img` tag
+    // ---
+    // NOTE: Modern solution would be to use `object-fit` if not the support for IE11
+    // @supports (object-fit: cover) {
+    //     object-fit: cover;
+    // }
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     min-height: 100%;
+    //     min-width: 100%;
+
+    // #2. Image as a background 
+    // ---
+    display: block;
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+        &.product__img--1 {
+            background-image: url(https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1099&q=80);
+        }
+
+        &.product__img--2 {
+            background-image: url(https://images.unsplash.com/photo-1503602642458-232111445657?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1887&q=80);
+        }
+
+        &.product__img--3 {
+            background-image: url(https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80);
+        }
+
+        &.product__img--4 {
+            background-image: url(https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
+        }
+}
+
+.product__title {
+    margin-bottom: 11px;
+    font-size: rem(24px);
+    line-height: 26px;
+    font-weight: bold;
+}
+.product__subtitle {
+    margin-bottom: 9px;
+    font-size: rem(17px);
+    line-height: 23px;
+    font-weight: bold;
+}
+.product__description {
+    margin-bottom: 18px;
+    font-size: rem(17px);
+    line-height: 27px;
+    font-weight: 300;
+}
+.product__link {
+    color: #3546a6;
+    @include transition(color);
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: color.scale(#3546a6, $lightness: -40%);
+    }
+}

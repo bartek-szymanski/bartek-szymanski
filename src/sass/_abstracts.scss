@@ -1,0 +1,57 @@
+@use 'sass:math';
+// --- 
+
+// Variables
+// ---
+
+    $product-gap--mobile: 40px;
+    $product-gap--tablet: 50px;
+    $product-gap--desktop: 92px;
+
+    // Image sizes
+    // ---
+
+    $img--mobile__width: 286px;
+    $img--mobile__height: 403px;
+
+    $img--tablet__width: 200px;
+    $img--tablet__height: 281px;
+
+    $img--desktop__width: $img--mobile__width;
+    $img--desktop__height: $img--mobile__height;
+
+    
+// Functions and Mixins
+// ---
+
+    // Convert `px` to `rem`
+    // @param {number with `px` unit} $value - 
+    @function rem($value) {
+        $rem: math.div($value, 16px) + rem;
+        @return $rem;
+    }
+
+    // Transitions
+    // @param {String} $properties - a list of properties that can be transitioned
+    // @param {String} $effect ('ease-in-out') - transition timing function
+    // ---
+    @mixin transition($properties, $effect: "ease-in-out", $duration: 150ms) {
+        transition-property: #{$properties};
+        transition-duration: $duration;
+        transition-timing-function: #{$effect};
+        will-change: #{$properties};
+    }
+
+    // Media queries
+    // --- 
+    @mixin mq-tablet() {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @mixin mq-desktop() {
+        @media only screen and (min-width: 1025px) {
+            @content;
+        }
+    }
