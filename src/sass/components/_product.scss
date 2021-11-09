@@ -41,13 +41,13 @@
 .product__img-link {
     display: block;
     position: relative;
+    margin-bottom: 35px;
     height: $img--mobile__height;
     flex: 1 1 100%;
     overflow: hidden;
     filter: drop-shadow(5px 5px 12px rgba(0, 0, 0, 0.2));
-
-    margin-bottom: 35px;
     @include transition(filter);
+    cursor: pointer;
 
     @include mq-tablet() {
         height: $img--tablet__height;
