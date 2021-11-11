@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
-    // mode: 'development',
+    mode: 'development',
 
     plugins: [new MiniCssExtractPlugin()],
     
