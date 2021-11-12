@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Convert UI Test Task</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel="stylesheet" href="./main.css">
+    </head>
+
+    <body>
+
+        <section class="featured-products">
+            <!-- `h1` is allowed when used in sectioning elements that are creating a new context https://html.spec.whatwg.org/multipage/sections.html#headings-and-sections 
+        ... or shouldn't be used?
+        https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/
+        -->
+            <h1 class="featured-products__heading">Featured products</h1>
+            <div class="featured-products__items">
+
+                <article class="featured-products__product product">
+
+                    <a class="product__img-link">
+                        <!-- #1. 
+                        Not for responsive design, we can't choose different image based on screen size.
+                        Best would be to use `srcset` but in IE11 it will fallback to `src` which is not ideal.  
+                        <img srcset="" src="" alt="" loading="lazy">
+                    -->
+                        <!-- <img class="product__img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1099&q=80" alt="This is a product description" loading="lazy"> -->
+
+                        <!-- #2. 
+                        Works in all browsers but harder to maintain in the back-end
+                    -->
+                        <span class="product__img product__img--1" role="img" aria-label="This is a product lorem ipsum"></span>
+                    </a>
+
+                    <div class="product__info">
+                        <h1 class="product__title">Lorem ipsum</h1>
+                        <h2 class="product__subtitle">Dolor sit amet consectetur</h2>
+                        <div class="product__description">Accusamus dicta doloribus error qui earum at et aperiam sunt molestias eligendi ad sapiente iure aliquam impedit architecto, eos nostrum adipisci unde?</div>
+                        <a href="#" class="product__link">Lorem ipsum</a>
+                    </div>
+
+                </article>
+
+                <article class="featured-products__product product">
+
+                    <a class="product__img-link">
+                        <!-- <img class="product__img" src="https://images.unsplash.com/photo-1503602642458-232111445657?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1887&q=80" alt="This is a product description" loading="lazy"> -->
+                        <span class="product__img product__img--2" role="img" aria-label="This is a product lorem ipsum"></span>
+                    </a>
+
+                    <div class="product__info">
+                        <h1 class="product__title">Lorem ipsum</h1>
+                        <h2 class="product__subtitle">Dolor sit amet consectetur</h2>
+                        <div class="product__description">Accusamus dicta doloribus error qui earum at et aperiam sunt molestias eligendi ad sapiente iure aliquam impedit architecto, eos nostrum adipisci unde?</div>
+                        <a href="#" class="product__link">Lorem ipsum</a>
+                    </div>
+
+                </article>
+
+                <article class="featured-products__product product">
+
+                    <a class="product__img-link">
+                        <!-- <img class="product__img" src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="This is a product description" loading="lazy"> -->
+                        <span class="product__img product__img--3" role="img" aria-label="This is a product lorem ipsum"></span>
+
+                    </a>
+
+                    <div class="product__info">
+                        <h1 class="product__title">Lorem ipsum</h1>
+                        <h2 class="product__subtitle">Dolor sit amet consectetur</h2>
+                        <div class="product__description">Accusamus dicta doloribus error qui earum at et aperiam sunt molestias eligendi ad sapiente iure aliquam impedit architecto, eos nostrum adipisci unde?</div>
+                        <a href="#" class="product__link">Lorem ipsum</a>
+                    </div>
+
+                </article>
+
+                <article class="featured-products__product product">
+
+                    <a class="product__img-link">
+                        <!-- <img class="product__img" src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="This is a product description" loading="lazy"> -->
+                        <span class="product__img product__img--4" role="img" aria-label="This is a product lorem ipsum"></span>
+                    </a>
+
+                    <div class="product__info">
+                        <h1 class="product__title">Lorem ipsum</h1>
+                        <h2 class="product__subtitle">Dolor sit amet consectetur</h2>
+                        <div class="product__description">Accusamus dicta doloribus error qui earum at et aperiam sunt molestias eligendi ad sapiente iure aliquam impedit architecto, eos nostrum adipisci unde?</div>
+                        <a href="#" class="product__link">Lorem ipsum</a>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+    </body>
+
+</html>
