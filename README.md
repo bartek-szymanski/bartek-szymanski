@@ -1,5 +1,6 @@
-# convert-ui-test-task
-Featured products page view
+# Featured products page view
+
+Test task
 
 URL: https://bartek-szymanski.github.io/dist/index.html
 
